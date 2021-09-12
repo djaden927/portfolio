@@ -2,22 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+
+let initialDate = new Date(2019, 7, 29);
+let now = Date.now();
+let difference = now - initialDate;
+let millisecondsPerDay = 24 * 60 * 60 * 1000;
+let daysSince = Math.floor(difference / millisecondsPerDay);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {daysSince} days since Utah has beat BYU
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
